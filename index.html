@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroIngeniería S.A.S</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #0c2340;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #ffb400;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: black;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #e0a200;
+            border-radius: 5px;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1581092787763-f3d9d7dd6ed1') center/cover no-repeat;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 5px black;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card h3 {
+            color: #0c2340;
+        }
+        footer {
+            background-color: #0c2340;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .contact-form button {
+            background-color: #ffb400;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #e0a200;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ElectroIngeniería S.A.S</h1>
+        <p>Soluciones eléctricas integrales para la industria y el hogar</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="inicio" class="hero">
+        Potencia para tus proyectos ⚡
+    </section>
+
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <div class="services">
+            <div class="card">
+                <h3>Instalaciones Eléctricas</h3>
+                <p>Diseño e instalación de sistemas eléctricos residenciales, comerciales e industriales.</p>
+            </div>
+            <div class="card">
+                <h3>Mantenimiento Preventivo</h3>
+                <p>Revisión y mantenimiento de redes para garantizar seguridad y eficiencia.</p>
+            </div>
+            <div class="card">
+                <h3>Automatización Industrial</h3>
+                <p>Implementación de sistemas automáticos para optimizar procesos productivos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <h2>Proyectos Realizados</h2>
+        <p>Presentación de algunos proyectos destacados con imágenes y descripciones (a completar).</p>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea placeholder="Mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2025 ElectroIngeniería S.A.S - Todos los derechos reservados
+    </footer>
+
+    <script>
+        document.querySelector(".contact-form").addEventListener("submit", function(e){
+            e.preventDefault();
+            alert("Gracias por tu mensaje. Nos pondremos en contacto pronto.");
+        });
+    </script>
+
+</body>
+</html>
