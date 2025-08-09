@@ -3,52 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElectroIngeniería S.A.S</title>
+    <title>Lighgen - Ingeniería Eléctrica</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
-            padding: 0;
             background-color: #f4f4f4;
             color: #333;
         }
         header {
-            background-color: #0c2340;
+            background-color: #1C1C1C;
             color: white;
-            padding: 15px 20px;
+            padding: 20px;
             text-align: center;
+            animation: fadeIn 1.5s ease;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #324399; /* Azul principal */
         }
         nav {
-            background-color: #ffb400;
+            background-color: #324399; /* Azul principal */
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             padding: 10px 0;
         }
         nav a {
-            color: black;
+            color: white;
             text-decoration: none;
             padding: 10px 15px;
             font-weight: bold;
+            transition: background 0.3s;
         }
         nav a:hover {
-            background-color: #e0a200;
+            background-color: #253173; /* Azul más oscuro */
             border-radius: 5px;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1581092787763-f3d9d7dd6ed1') center/cover no-repeat;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px black;
+            animation: fadeIn 2s ease;
         }
         section {
             padding: 40px 20px;
             max-width: 1100px;
             margin: auto;
         }
-        .hero {
-            background: url('https://images.unsplash.com/photo-1581092787763-f3d9d7dd6ed1') center/cover no-repeat;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-shadow: 2px 2px 5px black;
+        h2 {
+            text-align: center;
+            color: #1C1C1C;
+            margin-bottom: 30px;
             font-size: 2rem;
-            font-weight: bold;
         }
         .services {
             display: grid;
@@ -59,17 +77,22 @@
             background: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
             text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
         }
         .card h3 {
-            color: #0c2340;
+            color: #324399; /* Azul principal */
         }
         footer {
-            background-color: #0c2340;
+            background-color: #1C1C1C;
             color: white;
             text-align: center;
             padding: 15px;
+            font-size: 0.9rem;
         }
         .contact-form input, .contact-form textarea {
             width: 100%;
@@ -77,24 +100,32 @@
             margin-bottom: 10px;
             border-radius: 5px;
             border: 1px solid #ccc;
+            font-family: 'Montserrat', sans-serif;
         }
         .contact-form button {
-            background-color: #ffb400;
+            background-color: #324399; /* Azul principal */
+            color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 20px;
             font-weight: bold;
             cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
         }
         .contact-form button:hover {
-            background-color: #e0a200;
+            background-color: #253173; /* Azul más oscuro */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>ElectroIngeniería S.A.S</h1>
-        <p>Soluciones eléctricas integrales para la industria y el hogar</p>
+        <h1>Lighgen</h1>
+        <p>Soluciones eléctricas de alta eficiencia para industria y hogar</p>
     </header>
 
     <nav>
@@ -105,7 +136,7 @@
     </nav>
 
     <section id="inicio" class="hero">
-        Potencia para tus proyectos ⚡
+        Potencia y tecnología para tus proyectos ⚡
     </section>
 
     <section id="servicios">
@@ -113,22 +144,22 @@
         <div class="services">
             <div class="card">
                 <h3>Instalaciones Eléctricas</h3>
-                <p>Diseño e instalación de sistemas eléctricos residenciales, comerciales e industriales.</p>
+                <p>Diseño e instalación para residencias, comercios e industrias.</p>
             </div>
             <div class="card">
                 <h3>Mantenimiento Preventivo</h3>
-                <p>Revisión y mantenimiento de redes para garantizar seguridad y eficiencia.</p>
+                <p>Inspección y mantenimiento para garantizar la seguridad y rendimiento.</p>
             </div>
             <div class="card">
-                <h3>Automatización Industrial</h3>
-                <p>Implementación de sistemas automáticos para optimizar procesos productivos.</p>
+                <h3>Automatización</h3>
+                <p>Sistemas automatizados para optimizar la producción y el consumo energético.</p>
             </div>
         </div>
     </section>
 
     <section id="proyectos">
         <h2>Proyectos Realizados</h2>
-        <p>Presentación de algunos proyectos destacados con imágenes y descripciones (a completar).</p>
+        <p style="text-align:center;">Presentación de proyectos con imágenes y descripciones (en construcción).</p>
     </section>
 
     <section id="contacto">
@@ -142,13 +173,13 @@
     </section>
 
     <footer>
-        &copy; 2025 ElectroIngeniería S.A.S - Todos los derechos reservados
+        &copy; 2025 Lighgen - Ingeniería Eléctrica | Todos los derechos reservados
     </footer>
 
     <script>
         document.querySelector(".contact-form").addEventListener("submit", function(e){
             e.preventDefault();
-            alert("Gracias por tu mensaje. Nos pondremos en contacto pronto.");
+            alert("Gracias por contactarnos. Pronto nos comunicaremos contigo.");
         });
     </script>
 
